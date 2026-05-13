@@ -12,8 +12,6 @@ Persistence is a critical stage in the attack lifecycle, allowing adversaries to
 
 ## 🧠 Persistence Coverage
 
-This playbook covers:
-
 1. [Registry-based persistence](01-registry-based-persistence.md)
 2. [Scheduled tasks abuse](02-scheduled-tasks-abuse.md)
 3. [Windows services & drivers](03-windows-services-and-drivers.md)
