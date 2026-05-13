@@ -2,7 +2,7 @@
 
 ## 🎯 Overview
 
-This playbook provides a structured approach to identifying and analyzing persistence mechanisms on Windows systems during DFIR investigations and CTF scenarios.
+This playbook provides a structured approach to **identifying and analyzing persistence mechanisms on Windows systems** during DFIR investigations and CTF scenarios.
 
 Persistence is a critical stage in the attack lifecycle, allowing adversaries to maintain access across reboots, logouts, and system changes.
 
