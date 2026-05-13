@@ -1,15 +1,9 @@
 <p align="center">
- <strong>Windows Persistence Mechanisms Investigation Playbook</strong>
+ <strong><p1>Windows Persistence Mechanisms Investigation Playbook</p1></strong>
 </p>
 
 <p align="center">
   <img src="docs/banner-image.png" alt="Windows Persistence DFIR Playbook Banner" />
-</p>
-
-<p align="center">
-![DFIR](https://img.shields.io/badge/DFIR-Investigation-blue)
-![SOC](https://img.shields.io/badge/SOC-Analysis-cyan)
-![Windows](https://img.shields.io/badge/Windows-Forensics-darkblue)
 </p>
 
 ## 🎯 Overview
