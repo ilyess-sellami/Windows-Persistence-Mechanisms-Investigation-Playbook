@@ -21,4 +21,4 @@ This playbook covers:
 5. [WMI event subscriptions](05-wmi-event-subscriptions.md)
 6. [Logon scripts & Group Policy abuse](06-logon-scripts-and-group-policy-abuse.md)
 7. [COM hijacking & DLL redirection](07-com-hijacking-and-dll-redirection.md)
-8. [Correlation & incident reconstruction]()
+8. [Correlation & incident reconstruction](08-correlation-and-incident-reconstruction.md)
