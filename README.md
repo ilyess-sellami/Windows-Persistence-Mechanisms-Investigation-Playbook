@@ -19,6 +19,6 @@ This playbook covers:
 3. [Windows services & drivers](03-windows-services-and-drivers.md)
 4. [Startup folder execution](04-sartup-folder-execution.md)
 5. [WMI event subscriptions](05-wmi-event-subscriptions.md)
-6. [Logon scripts & Group Policy abuse]()
-7. [COM hijacking & DLL redirection]()
+6. [Logon scripts & Group Policy abuse](06-logon-scripts-and-group-policy-abuse.md)
+7. [COM hijacking & DLL redirection](07-com-hijacking-and-dll-redirection.md)
 8. [Correlation & incident reconstruction]()
