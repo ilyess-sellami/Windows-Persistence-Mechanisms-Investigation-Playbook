@@ -1,0 +1,1 @@
+# Windows-Persistence-Mechanisms-Investigation-Playbook
