@@ -14,11 +14,11 @@ Persistence is a critical stage in the attack lifecycle, allowing adversaries to
 
 This playbook covers:
 
-1. [Registry-based persistence]()
-2. [Scheduled tasks abuse]()
-3. [Windows services & drivers]()
-4. [Startup folder execution]()
-5. [WMI event subscriptions]()
+1. [Registry-based persistence](01-registry-based-persistence.md)
+2. [Scheduled tasks abuse](02-scheduled-tasks-abuse.md)
+3. [Windows services & drivers](03-windows-services-and-drivers.md)
+4. [Startup folder execution](04-sartup-folder-execution.md)
+5. [WMI event subscriptions](05-wmi-event-subscriptions.md)
 6. [Logon scripts & Group Policy abuse]()
 7. [COM hijacking & DLL redirection]()
 8. [Correlation & incident reconstruction]()
