@@ -1,6 +1,4 @@
-<p align="center">
- <strong><p1>Windows Persistence Mechanisms Investigation Playbook</p1></strong>
-</p>
+<h1 align="center">Windows Persistence Mechanisms Investigation Playbook</h1>
 
 <p align="center">
   <img src="docs/banner-image.png" alt="Windows Persistence DFIR Playbook Banner" />
