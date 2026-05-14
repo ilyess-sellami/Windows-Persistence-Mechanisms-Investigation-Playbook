@@ -22,7 +22,7 @@ These mechanisms can provide user-level or system-wide persistence while enablin
 
 ### ``Run`` Keys
 
-**Run** keys are Windows registry locations used to automatically execute programs during user logon or system startup. Attackers commonly abuse these keys to maintain persistent access by launching malicious payloads every time the user signs in or the system boots.
+``Run`` keys are Windows registry locations used to automatically execute programs during user logon or system startup. Attackers commonly abuse these keys to maintain persistent access by launching malicious payloads every time the user signs in or the system boots.
 
 ```bash
 HKCU\Software\Microsoft\Windows\CurrentVersion\Run
@@ -34,7 +34,7 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\Run
 
 ### ``RunOnce`` Keys
 
-**RunOnce** keys are Windows registry locations used to execute programs only one time during the next user logon or system startup. After execution, the registry value is automatically removed by Windows. Attackers may abuse these keys for temporary persistence, payload staging, malware installation, or cleanup operations.
+``RunOnce`` keys are Windows registry locations used to execute programs only one time during the next user logon or system startup. After execution, the registry value is automatically removed by Windows. Attackers may abuse these keys for temporary persistence, payload staging, malware installation, or cleanup operations.
 
 ```bash
 HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce
@@ -48,7 +48,7 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce
 
 ### ``RunServices`` & ``RunServicesOnce`` Keys
 
-`RunServices` registry keys are legacy Windows startup locations used to automatically launch background services during system startup. Attackers may abuse these keys to execute malicious programs before user logon and maintain persistence across reboots.
+``RunServices`` registry keys are legacy Windows startup locations used to automatically launch background services during system startup. Attackers may abuse these keys to execute malicious programs before user logon and maintain persistence across reboots.
 
 `RunServicesOnce` works similarly but executes the program only one time before the registry entry is removed.
 
@@ -62,7 +62,7 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce
 
 ### ``Winlogon`` Keys
 
-**Winlogon** registry keys control important user logon processes in Windows, including the default shell and user initialization programs. Attackers abuse these keys to launch malicious executables automatically during user logon before the desktop fully loads.
+``Winlogon`` registry keys control important user logon processes in Windows, including the default shell and user initialization programs. Attackers abuse these keys to launch malicious executables automatically during user logon before the desktop fully loads.
 
 ```bash
 HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon
@@ -81,7 +81,7 @@ Malware persistence often works by:
 
 ### ``IFEO (Image File Execution Options)``
 
-**Image File Execution Options (IFEO)** is a Windows registry feature originally designed for debugging applications. Attackers abuse IFEO by adding a malicious debugger value to legitimate executables, causing Windows to launch malware whenever the targeted application starts.
+``Image File Execution Options (IFEO)`` is a Windows registry feature originally designed for debugging applications. Attackers abuse IFEO by adding a malicious debugger value to legitimate executables, causing Windows to launch malware whenever the targeted application starts.
 
 ```bash
 HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options
@@ -96,7 +96,7 @@ Common attacker techniques:
 
 ### ``StartupApproved`` Keys
 
-**StartupApproved** registry keys are used by Windows to track whether startup programs are enabled or disabled. Attackers may manipulate these keys to re-enable malicious startup entries or hide persistence mechanisms from normal startup management tools.
+``StartupApproved`` registry keys are used by Windows to track whether startup programs are enabled or disabled. Attackers may manipulate these keys to re-enable malicious startup entries or hide persistence mechanisms from normal startup management tools.
 
 ```bash
 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved
@@ -108,7 +108,7 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved
 
 ### ``Policies Explorer Run``
 
-**Policies\Explorer\Run** registry keys are Windows policy-based startup locations used to automatically execute programs during user logon. Attackers may abuse these keys to establish persistent execution through Windows policy mechanisms.
+``Policies\Explorer\Run`` registry keys are Windows policy-based startup locations used to automatically execute programs during user logon. Attackers may abuse these keys to establish persistent execution through Windows policy mechanisms.
 
 ```bash
 HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run
@@ -130,7 +130,7 @@ HKLM\Software\Microsoft\Windows NT\CurrentVersion\Windows
 
 ### ``Explorer`` Hooks
 
-`Explorer` hook persistence refers to registry modifications that influence or extend Windows Explorer behavior. Attackers may abuse these locations to automatically execute malicious code when Explorer starts or when a user logs in.
+``Explorer`` hook persistence refers to registry modifications that influence or extend Windows Explorer behavior. Attackers may abuse these locations to automatically execute malicious code when Explorer starts or when a user logs in.
 
 ```bash
 HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer
