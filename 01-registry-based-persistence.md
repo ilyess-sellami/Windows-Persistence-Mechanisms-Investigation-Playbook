@@ -130,7 +130,7 @@ HKLM\Software\Microsoft\Active Setup\Installed Components
 
 ---
 
-### ``Explorer Hooks``
+### ``Explorer`` Hooks
 
 ```bash
 HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer
