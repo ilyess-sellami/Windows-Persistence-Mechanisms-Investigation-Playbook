@@ -1,4 +1,4 @@
-# Registry-based persistence
+## Registry-based persistence
 
 Registry-based persistence is one of the most common persistence mechanisms used by attackers to automatically execute malicious payloads during system startup or user logon.
 
@@ -23,10 +23,8 @@ These mechanisms can provide user-level or system-wide persistence while enablin
 **Run** keys are Windows registry locations used to automatically execute programs during user logon or system startup. Attackers commonly abuse these keys to maintain persistent access by launching malicious payloads every time the user signs in or the system boots.
 
 ```bash
-## Current User
 HKCU\Software\Microsoft\Windows\CurrentVersion\Run
 
-## Local Machine
 HKLM\Software\Microsoft\Windows\CurrentVersion\Run
 ```
 
@@ -37,14 +35,26 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\Run
 **RunOnce** keys are Windows registry locations used to execute programs only one time during the next user logon or system startup. After execution, the registry value is automatically removed by Windows. Attackers may abuse these keys for temporary persistence, payload staging, malware installation, or cleanup operations.
 
 ```bash
-## Current User
 HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce
 
-## Local Machine
 HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce
 ```
 
 > The main difference between Run and RunOnce keys is the execution frequency. Run keys execute programs every time the user logs in, while RunOnce keys execute programs only one time before the registry entry is automatically removed.
+
+---
+
+### ``RunServices`` & ``RunServicesOnce`` Keys
+
+`RunServices` registry keys are legacy Windows startup locations used to automatically launch background services during system startup. Attackers may abuse these keys to execute malicious programs before user logon and maintain persistence across reboots.
+
+`RunServicesOnce` works similarly but executes the program only one time before the registry entry is removed.
+
+```bash
+HKLM\Software\Microsoft\Windows\CurrentVersion\RunServices
+
+HKLM\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce
+```
 
 ---
 
@@ -81,3 +91,73 @@ Common attacker techniques:
 - Launching payloads through fake debugger executables
 
 ---
+
+### ``StartupApproved`` Keys
+
+``StartupApproved`` registry keys are used by Windows to track whether startup programs are enabled or disabled. Attackers may manipulate these keys to re-enable malicious startup entries or hide persistence mechanisms from normal startup management tools.
+
+```bash
+HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved
+
+HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved
+```
+
+---
+
+### ``Policies Explorer`` Run
+
+```bash
+HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run
+
+HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run
+```
+
+---
+
+### ``AppInit_DLLs``
+
+```bash
+HKLM\Software\Microsoft\Windows NT\CurrentVersion\Windows
+```
+
+---
+
+### ``Active Setup``
+
+```bash
+HKLM\Software\Microsoft\Active Setup\Installed Components
+```
+
+---
+
+### ``Explorer Hooks``
+
+```bash
+HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer
+
+HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer
+```
+
+---
+
+### User Shell Folders
+
+```bash
+HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders
+```
+
+---
+
+### ``Load`` Key
+
+```bash
+HKCU\Software\Microsoft\Windows NT\CurrentVersion\Windows
+```
+
+---
+
+### ``LSA`` Providers
+
+```bash
+HKLM\SYSTEM\CurrentControlSet\Control\Lsa
+```
