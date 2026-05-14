@@ -85,11 +85,11 @@ reg query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule" /s
 
 ### Event Log Investigation
 
-- **Event ID 4698 → Task Created**
-- **Event ID 4702 → Task Updated**
-- **Event ID 4699 → Task Deleted**
-- **Event ID 4700 / 4701 → Task Enabled/Disabled**
-- **Event ID 4688 → Process Execution Correlation**
+- Event ID : **4698 → Task Created**
+- Event ID : **4702 → Task Updated**
+- Event ID : **4699 → Task Deleted**
+- Event ID : **4700 / 4701 → Task Enabled/Disabled**
+- Event ID : **4688 → Process Execution Correlation**
 
 ---
 
