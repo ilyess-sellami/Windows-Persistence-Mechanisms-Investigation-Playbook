@@ -1,4 +1,6 @@
-## Registry-based persistence
+# Registry-based persistence
+
+## Description
 
 Registry-based persistence is one of the most common persistence mechanisms used by attackers to automatically execute malicious payloads during system startup or user logon.
 
