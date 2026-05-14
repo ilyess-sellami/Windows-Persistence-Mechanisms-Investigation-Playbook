@@ -44,4 +44,4 @@ HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce
 HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce
 ```
 
->> "The main difference between Run and RunOnce keys is the execution frequency. Run keys execute programs every time the user logs in, while RunOnce keys execute programs only one time before the registry entry is automatically removed."
+> "The main difference between Run and RunOnce keys is the execution frequency. Run keys execute programs every time the user logs in, while RunOnce keys execute programs only one time before the registry entry is automatically removed."
