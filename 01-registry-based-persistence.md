@@ -94,7 +94,7 @@ Common attacker techniques:
 
 ### ``StartupApproved`` Keys
 
-``StartupApproved`` registry keys are used by Windows to track whether startup programs are enabled or disabled. Attackers may manipulate these keys to re-enable malicious startup entries or hide persistence mechanisms from normal startup management tools.
+**StartupApproved** registry keys are used by Windows to track whether startup programs are enabled or disabled. Attackers may manipulate these keys to re-enable malicious startup entries or hide persistence mechanisms from normal startup management tools.
 
 ```bash
 HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved
@@ -104,7 +104,9 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved
 
 ---
 
-### ``Policies Explorer`` Run
+### ``Policies Explorer Run``
+
+**Policies\Explorer\Run** registry keys are Windows policy-based startup locations used to automatically execute programs during user logon. Attackers may abuse these keys to establish persistent execution through Windows policy mechanisms.
 
 ```bash
 HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run
@@ -114,7 +116,9 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run
 
 ---
 
-### ``AppInit_DLLs``
+### ``Windows`` Registry Key (AppInit / Load Behavior)
+
+``Windows`` controls system-wide Windows behavior related to application initialization and DLL loading. Attackers may abuse this key—especially `AppInit_DLLs`—to force malicious DLLs to load into multiple processes for persistent execution.
 
 ```bash
 HKLM\Software\Microsoft\Windows NT\CurrentVersion\Windows
@@ -122,15 +126,9 @@ HKLM\Software\Microsoft\Windows NT\CurrentVersion\Windows
 
 ---
 
-### ``Active Setup``
-
-```bash
-HKLM\Software\Microsoft\Active Setup\Installed Components
-```
-
----
-
 ### ``Explorer`` Hooks
+
+`Explorer` hook persistence refers to registry modifications that influence or extend Windows Explorer behavior. Attackers may abuse these locations to automatically execute malicious code when Explorer starts or when a user logs in.
 
 ```bash
 HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer
@@ -140,24 +138,37 @@ HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer
 
 ---
 
-### User Shell Folders
+## Registry Key Enumeration
 
-```bash
-HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders
+Registry persistence keys can be investigated using PowerShell, Command Prompt, or the Windows Registry Editor (`regedit.exe`).
+
+### Enumerate Using PowerShell
+
+```powershell
+reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Run"
+
+reg query "HKLM\Software\Microsoft\Windows\CurrentVersion\Run"
 ```
 
 ---
 
-### ``Load`` Key
+### Enumerate Using Registry Editor
+
+Open Registry Editor:
 
 ```bash
-HKCU\Software\Microsoft\Windows NT\CurrentVersion\Windows
+Win + R → regedit
 ```
 
----
-
-### ``LSA`` Providers
+Navigate to a registry path manually:
 
 ```bash
-HKLM\SYSTEM\CurrentControlSet\Control\Lsa
+Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
 ```
+
+Review:
+
+- Registry values
+- Executable paths
+- Suspicious startup entries
+- Obfuscated commands
