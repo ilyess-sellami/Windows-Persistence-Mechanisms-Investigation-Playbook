@@ -45,3 +45,37 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce
 ```
 
 > The main difference between Run and RunOnce keys is the execution frequency. Run keys execute programs every time the user logs in, while RunOnce keys execute programs only one time before the registry entry is automatically removed.
+
+---
+
+### Winlogon Keys
+
+Winlogon registry keys control important user logon processes in Windows, including the default shell and user initialization programs. Attackers abuse these keys to launch malicious executables automatically during user logon before the desktop fully loads.
+
+```bash
+HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon
+```
+
+Commonly targeted values:
+- `Shell`
+- `Userinit`
+
+Malware persistence often works by:
+- Replacing `explorer.exe` with a malicious executable
+- Adding malware alongside legitimate `userinit.exe`
+- Launching hidden payloads during the logon process
+
+---
+
+### IFEO (Image File Execution Options)
+
+Image File Execution Options (IFEO) is a Windows registry feature originally designed for debugging applications. Attackers abuse IFEO by adding a malicious debugger value to legitimate executables, causing Windows to launch malware whenever the targeted application starts.
+
+```bash
+HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options
+```
+
+Common attacker techniques:
+- Hijacking `utilman.exe`, `sethc.exe`, or `cmd.exe`
+- Redirecting legitimate programs to malware loaders
+- Launching payloads through fake debugger executables
