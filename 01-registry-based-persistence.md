@@ -20,6 +20,8 @@ These mechanisms can provide user-level or system-wide persistence while enablin
 
 ### Run Keys
 
+Run keys are Windows registry locations used to automatically execute programs during user logon or system startup. Attackers commonly abuse these keys to maintain persistent access by launching malicious payloads every time the user signs in or the system boots.
+
 ```bash
 ## Current User
 HKCU\Software\Microsoft\Windows\CurrentVersion\Run
