@@ -18,9 +18,9 @@ These mechanisms can provide user-level or system-wide persistence while enablin
 
 ## Important Registry Locations
 
-### Run Keys
+### ``Run`` Keys
 
-Run keys are Windows registry locations used to automatically execute programs during user logon or system startup. Attackers commonly abuse these keys to maintain persistent access by launching malicious payloads every time the user signs in or the system boots.
+**Run** keys are Windows registry locations used to automatically execute programs during user logon or system startup. Attackers commonly abuse these keys to maintain persistent access by launching malicious payloads every time the user signs in or the system boots.
 
 ```bash
 ## Current User
@@ -32,9 +32,9 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\Run
 
 ---
 
-### RunOnce Keys
+### ``RunOnce`` Keys
 
-RunOnce keys are Windows registry locations used to execute programs only one time during the next user logon or system startup. After execution, the registry value is automatically removed by Windows. Attackers may abuse these keys for temporary persistence, payload staging, malware installation, or cleanup operations.
+**RunOnce** keys are Windows registry locations used to execute programs only one time during the next user logon or system startup. After execution, the registry value is automatically removed by Windows. Attackers may abuse these keys for temporary persistence, payload staging, malware installation, or cleanup operations.
 
 ```bash
 ## Current User
@@ -48,9 +48,9 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce
 
 ---
 
-### Winlogon Keys
+### ``Winlogon`` Keys
 
-Winlogon registry keys control important user logon processes in Windows, including the default shell and user initialization programs. Attackers abuse these keys to launch malicious executables automatically during user logon before the desktop fully loads.
+**Winlogon** registry keys control important user logon processes in Windows, including the default shell and user initialization programs. Attackers abuse these keys to launch malicious executables automatically during user logon before the desktop fully loads.
 
 ```bash
 HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon
@@ -67,9 +67,9 @@ Malware persistence often works by:
 
 ---
 
-### IFEO (Image File Execution Options)
+### ``IFEO (Image File Execution Options)``
 
-Image File Execution Options (IFEO) is a Windows registry feature originally designed for debugging applications. Attackers abuse IFEO by adding a malicious debugger value to legitimate executables, causing Windows to launch malware whenever the targeted application starts.
+**Image File Execution Options (IFEO)** is a Windows registry feature originally designed for debugging applications. Attackers abuse IFEO by adding a malicious debugger value to legitimate executables, causing Windows to launch malware whenever the targeted application starts.
 
 ```bash
 HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options
@@ -79,3 +79,5 @@ Common attacker techniques:
 - Hijacking `utilman.exe`, `sethc.exe`, or `cmd.exe`
 - Redirecting legitimate programs to malware loaders
 - Launching payloads through fake debugger executables
+
+---
