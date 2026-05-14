@@ -31,3 +31,17 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\Run
 ```
 
 ---
+
+### RunOnce Keys
+
+RunOnce keys are Windows registry locations used to execute programs only one time during the next user logon or system startup. After execution, the registry value is automatically removed by Windows. Attackers may abuse these keys for temporary persistence, payload staging, malware installation, or cleanup operations.
+
+```bash
+## Current User
+HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce
+
+## Local Machine
+HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce
+```
+
+>> "The main difference between Run and RunOnce keys is the execution frequency. Run keys execute programs every time the user logs in, while RunOnce keys execute programs only one time before the registry entry is automatically removed."
