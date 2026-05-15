@@ -4,13 +4,6 @@
 
 Windows Services and Drivers are core operating system components used to run background processes and kernel-level functionality. Attackers frequently abuse them for persistence because they can execute automatically during system boot and often run with high privileges such as SYSTEM.
 
-Malicious services and drivers are commonly used in :
-- Malware persistence
-- Rootkits
-- Privilege escalation
-- Defense evasion
-- Long-term system access
-
 ---
 
 ## Registry Locations

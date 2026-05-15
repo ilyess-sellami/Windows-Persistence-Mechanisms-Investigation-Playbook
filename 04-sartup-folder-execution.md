@@ -4,12 +4,6 @@
 
 Windows Startup folders are special directories that automatically execute programs when a user logs in. Attackers frequently abuse these folders to maintain persistence by placing malicious executables, scripts, or shortcuts that launch during user logon.
 
-This technique is simple, reliable, and commonly observed in:
-- Malware infections
-- Red team operations
-- CTF persistence challenges
-- Real-world DFIR investigations
-
 ---
 
 ## Startup Folder Locations
