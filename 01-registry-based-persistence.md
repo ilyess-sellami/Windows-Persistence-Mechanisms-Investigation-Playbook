@@ -96,7 +96,7 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved
 
 ---
 
-### ``Policies Explorer Run``
+### ``Policies\Explorer\Run``
 
 ``Policies\Explorer\Run`` registry keys are Windows policy-based startup locations used to automatically execute programs during user logon. Attackers may abuse these keys to establish persistent execution through Windows policy mechanisms.
 
