@@ -114,10 +114,10 @@ reg query "HKLM\SYSTEM\CurrentControlSet\Services" /s
 
 ## Suspicious Indicators in Service Analysis
 
-Investigate services that show:
+Investigate services that show :
 
 - Random or fake Windows-like names
-- Services running from:
+- Services running from :
     - ``%Temp%``
     - ``%AppData%``
     - ``C:\Users\Public\``
