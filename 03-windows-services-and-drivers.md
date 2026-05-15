@@ -129,3 +129,20 @@ Investigate services that show:
 - Drivers loaded from non-standard directories
 - Missing company/vendor information
 - Services masquerading as legitimate Windows components
+
+Example Malicious Service : 
+
+```powershell
+Name        : WindowsUpdateService
+State       : Running
+StartMode   : Auto
+PathName    : C:\Users\Public\updater.exe
+StartName   : LocalSystem
+```
+
+This service is suspicious because :
+
+- Name mimics legitimate Windows behavior
+- Executes from ``C:\Users\Public\``
+- Runs automatically at boot
+- Executes under SYSTEM privileges
