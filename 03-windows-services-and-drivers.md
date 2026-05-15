@@ -107,9 +107,8 @@ reg query "HKLM\SYSTEM\CurrentControlSet\Services" /s
 
 ### Event Log Investigation
 
-- Event ID : **7045 → Service Installed**
+- Event ID : **7045/4697 → Service Installed**
 - Event ID : **7036 → Service State Change**
-- Event ID : **4697 → Service Installed**
 
 ---
 
