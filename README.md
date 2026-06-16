@@ -16,3 +16,4 @@ Persistence is a critical stage in the attack lifecycle, allowing adversaries to
 2. [Scheduled tasks abuse](02-scheduled-tasks-abuse.md)
 3. [Windows services & drivers](03-windows-services-and-drivers.md)
 4. [Startup folder execution](04-sartup-folder-execution.md)
+5. [WMI Event Subscription persistence](05-wmi-event-subscription-persistence.md)
